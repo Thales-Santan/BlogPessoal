@@ -1,0 +1,54 @@
+<div class="container-fluide">
+    <div class="row">
+        <div class="col-md-6" id="img-bg"></div>
+
+        <div class="col-md-6 mt-5 mb-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+                    <h1 class="text-center">Cadastre-se</h1>
+                    <!--Criação do formulario-->
+                    <div class="form-groupe mt-2">
+                        <label for="nome">Nome</label>
+                        <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Digite o seu nome"  >  
+                    </div>
+
+                    <div class="form-groupe mt-2">
+                        <label for="usuario">Usuário</label>
+                        <input [(ngModel)]='user.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="Digite o seu nome de usuário">  
+                    </div>
+
+                    <div class="form-groupe mt-2">
+                        <label for="foto">Link da sua foto</label>
+                        <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Coloque o link do que será sua foto de perfil">  
+                    </div>
+
+                    <div class="form-groupe mt-2">
+                        <label for="senha">Senha</label>
+                        <!--(input)='confirmaSenha($event)' tem relaçao com o comentario em cadastrar.component.ts-->
+                        <input (input)='confirmaSenha($event)'  class="form-control" type="password" name="senha" id="senha" placeholder="Digite a sua senha">  
+                    </div>
+
+                    <div class="form-groupe mt-2">
+                        <label for="confirmaSenha">Confirme sua senha</label>
+                        <input  [(ngModel)]='user.senha' class="form-control" type="password" name="confirmaSenha" id="confirmaSenha" placeholder="Confirme sua senha">  
+                    </div>
+                    <!--Criação do select do formulario(o que é meio sem sentido)-->
+                    <div class="form-groupe mt-2 mb-0">
+                        <label for="tipoUser">Tipo de usuário</label>
+                        <select class="form-control" name="tipoUser" id="tipoUser" (change)='tipoUser($event)'>
+                            <option>Selecione um tipo de usuário</option>
+                            <option value="comum">Comum</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+                    </div>
+
+                    <div  class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-danger mt-3 mr-1" routerLink='/entrar'>Cancelar</button>
+                        <button type="submit" class="btn btn-success mt-3 ml-1" (click)='cadastrar()'>Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/Criação do formulario-->
+    </div>
+</div>

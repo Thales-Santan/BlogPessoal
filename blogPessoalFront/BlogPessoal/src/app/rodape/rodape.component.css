@@ -1,0 +1,26 @@
+/*Tirando os marcadores da lista de rede social*/
+ul.RSocial{
+    list-style: none;
+    padding: 0;
+}
+/*Colocando a lista de rede social alinhada uma ao lado da outra e dando espaçamento*/
+ul.RSocial li{
+    display: inline;
+    margin: 0;
+    padding: 4px;
+}
+
+/*Aumentando o tamanho dos icones da rede social */
+.fa{
+    font-size: 35pt;
+    color: white;
+    padding: 10px;
+}
+/*Criando o efeito da mudança de cor ao passar o mouse sobre cada icone da lista*/
+.fa-github-alt:hover{
+    color:black
+}
+
+.fa-linkedin:hover{
+    color: #0A66C2;
+}

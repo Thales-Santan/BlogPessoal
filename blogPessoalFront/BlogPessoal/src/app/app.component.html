@@ -1,0 +1,3 @@
+<app-menu *ngIf='auth.logado()'></app-menu>  <!--Esse NgIf tem relaçao com a camada auth.service.ts-->
+<router-outlet></router-outlet>
+<app-rodape *ngIf='auth.logado()'></app-rodape>

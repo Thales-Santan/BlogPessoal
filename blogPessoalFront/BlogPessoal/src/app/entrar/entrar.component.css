@@ -1,0 +1,8 @@
+/*Colocando a imagem da pg de entrada*/
+#img-bg{
+   background-image:url(https://thumbs.dreamstime.com/b/porta-3d-branca-no-fundo-preto-12817925.jpg);
+   min-height: 695px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
